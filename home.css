@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile {
+    cursor: pointer;
+  }
+  
+  .profile-info {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    flex: 0 0 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .medication-reminders {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }

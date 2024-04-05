@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Chronic Disease Management</div>
+    <div class="profile" onclick="toggleProfile()">User Profile</div>
+    <div class="profile-info" id="profileInfo">
+      <p>Name: John Doe</p>
+      <p>Email: john@example.com</p>
+      <p>Mobile: +1234567890</p>
+      <button onclick="signOut()">Sign Out</button>
+    </div>
+  </header>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <div class="menu-icon" onclick="toggleMenu()">Menu</div>
+      <ul class="menu">
+        <li><a href="dashboard.html">Healthcare Dashboard</a></li>
+        <li><a href="diet_plan.html">Diet Plan</a></li>
+        <li><a href="symptoms.html">Identify Symptoms</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="communicate.html">Communicate with Healthcare Experts</a></li>
+        <li><a href="help.html">Help and Support</a></li>
+      </ul>
+    </aside>
+    <main class="main">
+      <section class="medication-reminders">
+        <h2>Upcoming Medication Reminders</h2>
+        <div id="medicationReminders">
+          <div class="reminder">
+            <h3>Reminder 1</h3>
+            <p>Medication: Aspirin</p>
+            <p>Time: 8:00 AM</p>
+          </div>
+          <div class="reminder">
+            <h3>Reminder 2</h3>
+            <p>Medication: Metformin</p>
+            <p>Time: 12:00 PM</p>
+          </div>
+          <div class="reminder">
+            <h3>Reminder 3</h3>
+            <p>Medication: Lisinopril</p>
+            <p>Time: 6:00 PM</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
+>

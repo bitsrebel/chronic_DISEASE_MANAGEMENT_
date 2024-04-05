@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Chronic Disease Management</div>
+    <div class="profile" onclick="toggleProfile()">User Profile</div>
+    <div class="profile-info" id="profileInfo">
+      <p>Name: John Doe</p>
+      <p>Email: john@example.com</p>
+      <p>Mobile: +1234567890</p>
+      <button onclick="signOut()">Sign Out</button>
+    </div>
+  </header>
+  <main>
+    <section id="patientInfo">
+      <h2 onclick="toggleDropdown('diseaseInfo')">Patient Information</h2>
+      <div id="diseaseInfo" class="dropdown-content">
+        <p>Diseases: Diabetes, Hypertension</p>
+        <p>Allergies: None</p>
+        <p>Previous Surgeries: Appendectomy (2010)</p>
+      </div>
+      <h2 onclick="toggleDropdown('bmiBloodGroup')">BMI & Blood Group</h2>
+      <div id="bmiBloodGroup" class="dropdown-content">
+        <p>BMI: 25</p>
+        <p>Blood Group: A+</p>
+        <p>Height: 175 cm</p>
+        <p>Weight: 75 kg</p>
+      </div>
+      <h2 onclick="toggleDropdown('medications')">Medications</h2>
+      <div id="medications" class="dropdown-content">
+        <p><strong>Diabetes:</strong> Insulin (Morning, Afternoon)</p>
+        <p><strong>Hypertension:</strong> Losartan (Morning)</p>
+        <p>Medication Period: 30 days</p>
+      </div>
+      <h2 onclick="toggleDropdown('medicalConsultant')">Medical Consultant</h2>
+      <div id="medicalConsultant" class="dropdown-content">
+        <p>Medical Consultant: Dr. Smith</p>
+        <p>Last Consultation: 2022-03-15</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

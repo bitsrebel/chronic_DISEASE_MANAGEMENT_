@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile {
+    cursor: pointer;
+  }
+  
+  .profile-info {
+    display: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333; /* Text color for dropdown content */
+  }
+  
+  .dropdown-content p {
+    margin: 0;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }

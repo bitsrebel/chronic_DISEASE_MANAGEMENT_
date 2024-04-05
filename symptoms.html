@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptoms Search</title>
+  <link rel="stylesheet" href="symptoms.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Symptoms Search</div>
+  </header>
+  <main>
+    <section>
+      <h2>Search Symptoms</h2>
+      <form id="searchForm">
+        <input type="text" id="diseaseInput" placeholder="Enter disease name...">
+        <button type="submit">Search</button>
+      </form>
+      <div id="symptomContent" class="content">
+        <!-- Symptoms content will be displayed here -->
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    // Sample data for symptoms
+    const symptomsData = {
+      "Diabetes": ["Increased thirst", "Frequent urination", "Blurred vision", "Fatigue"],
+      "Hypertension": ["Headache", "Dizziness", "Blurred vision", "Chest pain"],
+      "Asthma": ["Shortness of breath", "Coughing", "Wheezing", "Chest tightness"],
+      "Arthritis": ["Joint pain", "Swelling", "Stiffness", "Decreased range of motion"],
+      "Migraine": ["Severe headache", "Nausea", "Sensitivity to light", "Sensitivity to sound"],
+      "Depression": ["Persistent sadness", "Loss of interest or pleasure", "Fatigue", "Difficulty sleeping"],
+      "Allergies": ["Sneezing", "Runny or stuffy nose", "Itchy or watery eyes", "Skin rash or hives"],
+      "Gastroesophageal Reflux Disease (GERD)": ["Heartburn", "Regurgitation", "Difficulty swallowing", "Chest pain"],
+      "Chronic Obstructive Pulmonary Disease (COPD)": ["Shortness of breath", "Chronic cough", "Wheezing", "Chest tightness"],
+      "Chronic Kidney Disease (CKD)": ["Fatigue", "Swelling in the ankles, feet, or hands", "Shortness of breath", "Nausea"],
+      "Crohn's Disease": ["Abdominal pain", "Diarrhea", "Fatigue", "Weight loss"],
+      "Rheumatoid Arthritis": ["Joint pain", "Swelling", "Stiffness", "Fatigue"],
+      "Multiple Sclerosis (MS)": ["Fatigue", "Numbness or weakness in limbs", "Electric shock sensations with certain neck movements", "Tremors"],
+      "Parkinson's Disease": ["Tremor", "Slowed movement (bradykinesia)", "Rigid muscles", "Impaired posture and balance"],
+      "Systemic Lupus Erythematosus (SLE)": ["Fatigue", "Joint pain", "Skin rashes", "Fever"],
+      "Chronic Heart Failure (CHF)": ["Shortness of breath", "Fatigue", "Swelling in the legs", "Persistent cough"],
+      "Osteoporosis": ["Bone pain", "Fractures", "Loss of height", "Stooped posture"],
+      "Chronic Hepatitis": ["Fatigue", "Abdominal pain", "Jaundice", "Nausea and vomiting"],
+      "diabetes": ["Increased thirst", "Frequent urination", "Blurred vision", "Fatigue"],
+      "hypertension": ["Headache", "Dizziness", "Blurred vision", "Chest pain"],
+      "asthma": ["Shortness of breath", "Coughing", "Wheezing", "Chest tightness"],
+      "arthritis": ["Joint pain", "Swelling", "Stiffness", "Decreased range of motion"],
+      "migraine": ["Severe headache", "Nausea", "Sensitivity to light", "Sensitivity to sound"],
+      "depression": ["Persistent sadness", "Loss of interest or pleasure", "Fatigue", "Difficulty sleeping"],
+      "allergies": ["Sneezing", "Runny or stuffy nose", "Itchy or watery eyes", "Skin rash or hives"],
+      "gastroesophageal Reflux Disease (GERD)": ["Heartburn", "Regurgitation", "Difficulty swallowing", "Chest pain"],
+      "chronic Obstructive Pulmonary Disease (COPD)": ["Shortness of breath", "Chronic cough", "Wheezing", "Chest tightness"],
+      "chronic Kidney Disease (CKD)": ["Fatigue", "Swelling in the ankles, feet, or hands", "Shortness of breath", "Nausea"],
+      "crohn's Disease": ["Abdominal pain", "Diarrhea", "Fatigue", "Weight loss"],
+      "rheumatoid Arthritis": ["Joint pain", "Swelling", "Stiffness", "Fatigue"],
+      "multiple Sclerosis (MS)": ["Fatigue", "Numbness or weakness in limbs", "Electric shock sensations with certain neck movements", "Tremors"],
+      "parkinson's Disease": ["Tremor", "Slowed movement (bradykinesia)", "Rigid muscles", "Impaired posture and balance"],
+      "systemic Lupus Erythematosus (SLE)": ["Fatigue", "Joint pain", "Skin rashes", "Fever"],
+      "chronic Heart Failure (CHF)": ["Shortness of breath", "Fatigue", "Swelling in the legs", "Persistent cough"],
+      "osteoporosis": ["Bone pain", "Fractures", "Loss of height", "Stooped posture"],
+      "chronic Hepatitis": ["Fatigue", "Abdominal pain", "Jaundice", "Nausea and vomiting"]
+      // Add more diseases and symptoms as needed
+    };
+
+    // Function to display symptoms based on user input
+    function displaySymptoms() {
+      const input = document.getElementById("diseaseInput").value;
+      const symptomContent = document.getElementById("symptomContent");
+
+      // Clear previous content
+      symptomContent.innerHTML = "";
+
+      // Check if the entered disease exists in the data
+      if (symptomsData[input]) {
+        const symptoms = symptomsData[input];
+        const ul = document.createElement("ul");
+        symptoms.forEach(symptom => {
+          const li = document.createElement("li");
+          li.textContent = symptom;
+          ul.appendChild(li);
+        });
+        symptomContent.appendChild(ul);
+      } else {
+        symptomContent.textContent = "Symptoms not found for the entered disease.";
+      }
+    }
+
+    // Event listener for form submission
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      displaySymptoms();
+    });
+  </script>
+</body>
+</html>
